@@ -233,3 +233,5 @@ Completed:
 - Snippet generation
 
 The web interface and evaluation components have not yet been implemented.
+
+Developed by Alireza Golshan & Homayoon Mohammadi Fard
