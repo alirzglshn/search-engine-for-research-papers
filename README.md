@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project is a simple Information Retrieval search engine developed as a university project.
+This project is a simple Information Retrieval search engine.
 
-The system indexes research paper metadata from the arXiv dataset and provides multiple search methods over the indexed collection.
+The system indexes research paper metadata from the arXiv dataset (from Cornell University) and provides multiple search methods over the indexed collection.
 
 The project was implemented from scratch without using dedicated search libraries.
 
