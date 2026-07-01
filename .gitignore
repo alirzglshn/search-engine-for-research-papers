@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+irvenv/
+venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Local database
+*.sqlite3
+
+# Logs
+*.log
+
+# Large datasets
+data/raw/
+
+# Generated indexes
+data/indexes/*.pkl
+
+# NLTK data (optional)
+nltk_data/
