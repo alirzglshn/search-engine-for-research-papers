@@ -1,0 +1,215 @@
+:root {
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+    --color-border: #e3e3e3;
+    --color-text: #1f2328;
+    --color-text-muted: #6b7280;
+    --color-accent: #2454ff;
+    --color-accent-hover: #1a3fd1;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.site-header {
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.site-main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    padding: 2rem 1rem;
+}
+
+/* Home page hero */
+
+.hero {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Search form */
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.search-form-compact {
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 480px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.search-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.search-hints {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.3rem 0.75rem;
+}
+
+/* Results page */
+
+.results-summary {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.error-message,
+.no-results {
+    color: var(--color-text-muted);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.result-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+}
+
+.result-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+}
+
+.result-meta {
+    margin: 0 0 0.4rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.result-authors {
+    margin-right: 1rem;
+}
+
+.result-categories {
+    margin: 0 0 0.6rem;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+}
+
+.result-snippet {
+    margin: 0 0 0.6rem;
+    color: var(--color-text);
+}
+
+.result-score {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
+.page-status {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}

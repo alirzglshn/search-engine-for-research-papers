@@ -1,0 +1,42 @@
+{% extends "papers/base.html" %}
+
+{% block title %}Results for "{{ query }}" - Paper Search{% endblock %}
+
+{% block content %}
+<section class="results-page">
+    <form action="{% url 'papers:search_results' %}" method="get" class="search-form search-form-compact">
+        {{ form.q }}
+        <button type="submit" class="search-button">Search</button>
+    </form>
+
+    {% if form.errors %}
+        <p class="error-message">Please enter a search query.</p>
+    {% elif searched %}
+        <p class="results-summary">
+            {{ page_obj.paginator.count }} result{{ page_obj.paginator.count|pluralize }}
+            for <strong>{{ query }}</strong>
+        </p>
+
+        {% if page_obj.object_list %}
+            <ul class="result-list">
+                {% for paper in page_obj %}
+                <li class="result-card">
+                    <h2 class="result-title">{{ paper.title }}</h2>
+                    <p class="result-meta">
+                        <span class="result-authors">{{ paper.authors }}</span>
+                        <span class="result-year">{{ paper.year }}</span>
+                    </p>
+                    <p class="result-categories">{{ paper.categories }}</p>
+                    <p class="result-snippet">{{ paper.snippet }}</p>
+                    <p class="result-score">Score: {{ paper.score|floatformat:4 }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+
+            {% include "papers/_pagination.html" %}
+        {% else %}
+            <p class="no-results">No papers matched your query.</p>
+        {% endif %}
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "papers/base.html" %}
+
+{% block title %}Paper Search{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1 class="hero-title">Research Paper Search</h1>
+    <p class="hero-subtitle">
+        Keyword, phrase, Boolean, and wildcard search over a corpus of
+        academic papers.
+    </p>
+
+    <form action="{% url 'papers:search_results' %}" method="get" class="search-form">
+        {{ form.q }}
+        <button type="submit" class="search-button">Search</button>
+    </form>
+
+    <div class="search-hints">
+        <span class="hint">"exact phrase"</span>
+        <span class="hint">term AND term</span>
+        <span class="hint">term OR term</span>
+        <span class="hint">term NOT term</span>
+        <span class="hint">prefix*</span>
+    </div>
+</section>
+{% endblock %}

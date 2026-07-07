@@ -1,5 +1,7 @@
+asgiref==3.11.1
 click==8.4.2
 colorama==0.4.6
+Django==6.0
 joblib==1.5.3
 nltk==3.9.4
 numpy==2.5.0
@@ -8,5 +10,6 @@ python-dateutil==2.9.0.post0
 regex==2026.6.28
 scipy==1.18.0
 six==1.17.0
+sqlparse==0.5.5
 tqdm==4.68.3
 tzdata==2026.2
